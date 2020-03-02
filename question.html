@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{the_title}}</h2>
+
+<form method='POST' action='/results'>
+<table>
+	<tr class='the_question'>
+		<td><p>For ${{the_money}}, your question is: </p></td>
+		<td>{{the_question}}</td>
+	</tr>
+	<tr>
+		<td class='the_answer'>Your Answer:</td>
+		<td><input name='Player Answer' type='TEXT' width='60'></td>
+	</tr>
+</table>
+<p><input value='Submit' type='SUBMIT'></p>
+</form>
+
+<form method='POST' action='/finish'>
+	<p><input value='Quit' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
